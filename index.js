@@ -13,12 +13,13 @@ const app = express();
 // Middleware
 app.use(cors(
     {
-  origin: [
+    origin: '*',
+  // origin: [
     
-    //'http://localhost:4000',
-    'https://kingscare-frontend-9q1j.vercel.app/',
-    'https://kingscare-frontend.vercel.app'
-  ],
+  //   //'http://localhost:4000',
+  //   'https://kingscare-frontend-9q1j.vercel.app/',
+  //   'https://kingscare-frontend.vercel.app'
+  // ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept']

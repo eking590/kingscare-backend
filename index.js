@@ -15,7 +15,7 @@ app.use(cors(
     {
   origin: [
     
-    'http://localhost:4000',
+    //'http://localhost:4000',
     'https://kingscare-frontend-9q1j.vercel.app/'
   ],
   credentials: true

@@ -11,7 +11,16 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+    {
+  origin: [
+    
+    'http://localhost:4000',
+    'https://kingscare-frontend-9q1j.vercel.app/'
+  ],
+  credentials: true
+}
+));
 app.use(express.json());
 
 // Routes
@@ -26,7 +35,7 @@ app.get('/', (req, res) => {
 });
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/eldercare', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
